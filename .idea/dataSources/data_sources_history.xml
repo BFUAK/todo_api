@@ -1,0 +1,74 @@
+<DataSourcesHistory>
+  <DataSourceFromHistory isRemovedFromProject="true">
+    <data-source source="LOCAL" name="todo.sqlite" uuid="a40b04ce-27a3-4d52-a6aa-da4a1a44b2a4">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="SQLITE" />
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:todo.sqlite</jdbc-url>
+      <secret-storage>master_key</secret-storage>
+      <auth-provider>no-auth</auth-provider>
+      <schema-mapping />
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+  </DataSourceFromHistory>
+  <DataSourceFromHistory isRemovedFromProject="true">
+    <data-source source="LOCAL" name="identifier.sqlite" uuid="25496307-88de-4a9a-bc21-5d495a4442da">
+      <database-info product="SQLite" version="3.51.1" jdbc-version="4.2" driver-name="SQLite JDBC" driver-version="3.51.1.0" dbms="SQLITE" exact-version="3.51.1" exact-driver-version="3.51">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:identifier.sqlite</jdbc-url>
+      <secret-storage>master_key</secret-storage>
+      <auth-provider>no-auth</auth-provider>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema" qname="@" />
+        </introspection-scope>
+      </schema-mapping>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+  </DataSourceFromHistory>
+  <DataSourceFromHistory isRemovedFromProject="true">
+    <data-source source="LOCAL" name="todo.db" uuid="30d11c11-c432-441a-801d-d939018ba311">
+      <database-info product="SQLite" version="3.51.1" jdbc-version="4.2" driver-name="SQLite JDBC" driver-version="3.51.1.0" dbms="SQLITE" exact-version="3.51.1" exact-driver-version="3.51">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:todo.db</jdbc-url>
+      <secret-storage>master_key</secret-storage>
+      <auth-provider>no-auth</auth-provider>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema" qname="@" />
+        </introspection-scope>
+      </schema-mapping>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+  </DataSourceFromHistory>
+  <DataSourceFromHistory isRemovedFromProject="false">
+    <data-source source="LOCAL" name="todos" uuid="0cf6d440-1001-4fff-b83f-8a47464290b2">
+      <database-info product="SQLite" version="3.51.1" jdbc-version="4.2" driver-name="SQLite JDBC" driver-version="3.51.1.0" dbms="SQLITE" exact-version="3.51.1" exact-driver-version="3.51">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/todos.db</jdbc-url>
+      <auth-provider>no-auth</auth-provider>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema" qname="@" />
+        </introspection-scope>
+      </schema-mapping>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+  </DataSourceFromHistory>
+</DataSourcesHistory>
