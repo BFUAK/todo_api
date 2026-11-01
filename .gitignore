@@ -1,0 +1,7 @@
+__pycache__/
+coymain.py
+files/
+todos.db
+*.pyc
+.venv/
+.idea/
