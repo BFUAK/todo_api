@@ -1,9 +1,10 @@
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, sessionmaker, Session
 from database import Base, engine
 
-# =============2. 定义模型类（数据库表）=========================
+# ============= 定义模型类（数据库表）=========================
 
 # 定义数据库表对应的模型类
+# Todo 是ORM对象
 # Mapped -- 类型注解 （给IDE和SQLalchemy）
 # mapped_column -- 声明这是一个数据库列，可带参数
 class Todo(Base):
@@ -15,5 +16,5 @@ class Todo(Base):
 
 
 
-# ===========3. 启动时建表 ============================
+# =========== 启动时建表 ============================
 Base.metadata.create_all(bind=engine)

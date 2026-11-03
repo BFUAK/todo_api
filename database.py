@@ -3,7 +3,7 @@ from sqlalchemy.orm import DeclarativeBase, sessionmaker
 
 
 
-# =============1. 数据库引擎配置 ============================
+# ============= 数据库引擎配置 ============================
 engine = create_engine(
     "sqlite:///./todos.db",           # 数据库文件：todos.db
     connect_args={"check_same_thread" : False}   # SQLite + FastAPI 必备参数
@@ -19,7 +19,7 @@ class Base(DeclarativeBase):
 
 
 
-# ===================5. 依赖：每个请求一个会话，用完关闭 ======================
+# =================== 依赖：每个请求一个会话，用完关闭 ======================
 
 # 依赖项
 def get_db():
