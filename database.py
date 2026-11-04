@@ -6,7 +6,7 @@ from sqlalchemy.orm import DeclarativeBase, sessionmaker
 # ============= 数据库引擎配置 ============================
 engine = create_engine(
     "sqlite:///./todos.db",           # 数据库文件：todos.db
-    connect_args={"check_same_thread" : False}   # SQLite + FastAPI 必备参数
+    connect_args={"check_same_thread" : False}   # 允许同一个数据库连接被多个线程共享 SQLite + FastAPI 必备参数
 )
 
 # 创建会话工厂

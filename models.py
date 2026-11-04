@@ -1,13 +1,12 @@
-from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, sessionmaker, Session
+from sqlalchemy.orm import Mapped, mapped_column
 from database import Base, engine
 
 # ============= 定义模型类（数据库表）=========================
 
 # 定义数据库表对应的模型类
-# Todo 是ORM对象
-# Mapped -- 类型注解 （给IDE和SQLalchemy）
-# mapped_column -- 声明这是一个数据库列，可带参数
-class Todo(Base):
+
+
+class Todo(Base):                    # Todo 是ORM对象
     __tablename__ = "todo"
     id: Mapped[int] = mapped_column(primary_key=True)  # id为主键
     title: Mapped[str]

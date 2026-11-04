@@ -15,10 +15,9 @@ app = FastAPI(title="Todo API", version="1.0.0",
 @app.post("/todos", status_code = 201, response_model=TodoOut)
 def creat_todo(todo: TodoCreate, db: Session = Depends(get_db)):  # db:会话
     db_todo = Todo(**todo.model_dump())   # Pydantic -> ORM
-    db.add(db_todo) # 标记增加
-    db.commit()    # 提交事务，确认执行，落库  必须调—— 不 commit 数据不会真正落库
-    # 此时 db_todo.id 可能已是自增值，但一些数据库默认值（如 created_at）可能还没同步
-    db.refresh(db_todo)  # 从数据库重新加载, 让ORM对象拿到数据库生成的 id
+    db.add(db_todo)   # 添加到 Session（此时只是被标记为“待插入”，还在内存里）
+    db.commit()      # 提交事务（此时才真正生成 INSERT 语句发给数据库）
+    db.refresh(db_todo)  # 刷新对象（可选，但强烈推荐。为了拿到数据库自增生成的 id）
     return db_todo    # 完整最新数据, ORM对象 -> response_model -> TodoOut
 
 # 查询todo表中所有数据
@@ -43,6 +42,7 @@ def get_todo(todo_id:int, db:Session=Depends(get_db)):
         raise HTTPException(status_code=404,detail="Todo不存在")
     return todo
 
+# 按主键从数据库删除一条数据
 @app.delete("/todos/{todo_id}")
 def delete_todo(todo_id:int,db:Session = Depends(get_db)):
     todo = db.get(Todo,todo_id)
